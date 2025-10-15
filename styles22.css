@@ -1,0 +1,186 @@
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+    background-color: white; /* Fondo blanco */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: rgb(32, 93, 203); /* Color de fondo azul */
+    color: white; /* Color del texto */
+    padding: 15px 20px; /* Relleno del encabezado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del encabezado */
+    display: flex; /* Uso de flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alineación vertical de los elementos */
+}
+
+/* Estilo del título principal */
+#superior {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin-left: 10px; /* Margen a la izquierda */
+    display: flex; /* Flexbox para alinear íconos y texto */
+    align-items: center; /* Alineación vertical de los elementos */
+}
+
+/* Estilo del contenedor del logo y título */
+.logo-titulo {
+    display: flex; /* Flexbox para alinear logo y título */
+    align-items: center; /* Alineación vertical de los elementos */
+}
+
+/* Estilo del ícono del logo */
+#icono1 {
+    max-width: 50px; /* Ancho máximo del ícono */
+    border-radius: 50%; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del ícono */
+}
+
+
+/* Estilo del botón al pasar el ratón */
+.dropup:hover .dropbtn {
+    background-color: #2980B9; /* Cambiar color de fondo del botón al pasar el ratón */
+}
+
+/* Estilo del contenedor principal */
+.container {
+    display: flex; /* Uso de flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    padding: 20px; /* Relleno del contenedor */
+    background-color: white; /* Fondo blanco */
+    flex-direction: row-reverse; /* Intercambia de lado el texto y la galería */
+}
+
+/* Estilo de la galería de imágenes */
+.image-gallery {
+    padding-top: 5%; /* Relleno superior */
+    width: 45%; /* Ancho de la galería */
+    overflow: hidden; /* Ocultar desbordamiento */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo de los slides de la galería */
+.slides {
+    display: flex; /* Uso de flexbox para alinear slides */
+    transition: transform 0.8s ease-in-out; /* Transición suave al cambiar slides */
+}
+
+/* Estilo de cada slide */
+.slide {
+    width: 100%; /* Ancho completo */
+    flex-shrink: 0; /* No permitir que se reduzca el tamaño */
+}
+
+/* Estilo de las imágenes en los slides */
+.slide img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo al pasar el ratón sobre las imágenes */
+.slide img:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra al pasar el ratón */
+}
+
+/* Ocultar los botones de radio */
+input[type="radio"] {
+    display: none; /* Ocultar los botones de radio */
+}
+
+/* Estilo para el primer slide */
+#slide1:checked ~ .slides {
+    transform: translateX(0%); /* Mostrar primer slide */
+}
+
+/* Estilo para el segundo slide */
+#slide2:checked ~ .slides {
+    transform: translateX(-100%); /* Mostrar segundo slide */
+}
+
+/* Estilo para el tercer slide */
+#slide3:checked ~ .slides {
+    transform: translateX(-200%); /* Mostrar tercer slide */
+}
+
+/* Estilo de la navegación entre slides */
+.navigation {
+    display: flex; /* Uso de flexbox para alinear los indicadores */
+    justify-content: center; /* Centrar los indicadores */
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Estilo de cada indicador */
+.navigation label {
+    width: 15px; /* Ancho del indicador */
+    height: 15px; /* Altura del indicador */
+    margin: 0 5px; /* Margen lateral */
+    border-radius: 50%; /* Bordes redondeados */
+    background-color: #00aaff; /* Color de fondo del indicador */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+}
+
+/* Estilo del indicador activo */
+input[type="radio"]:checked + label {
+    background-color: #00aaff; /* Color de fondo del indicador activo */
+}
+
+/* Estilo del texto de visión y misión */
+.vision-text, .mission-text {
+    width: 45%; /* Ancho de las secciones de visión y misión */
+    padding: 6%; /* Relleno */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    box-shadow: 0 4px 10px rgba(12, 178, 229, 0.1); /* Sombra */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo de los títulos en visión y misión */
+.vision-text h1, .mission-text h1 {
+    padding-top: 5%; /* Relleno superior */
+    text-align: center; /* Alineación central del texto */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    color: #00aaff; /* Color azul */
+}
+
+/* Estilo de los párrafos en visión y misión */
+.vision-text p, .mission-text p {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+}
+
+nav {
+  background-color: #2e92f6; /* Un azul oscuro para el fondo del menú */
+  padding: 10px;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* La clave para que los elementos se vean en una fila */
+  justify-content: flex-start; /* Centra los elementos horizontalmente */
+}
+
+nav li {
+  margin: 0 15px; /* Espacio entre cada elemento del menú */
+}
+
+nav a {
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  color: white; /* Color del texto */
+  font-weight: bold;
+  padding: 10px 15px; /* Relleno para que parezcan botones */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+nav a:hover {
+  background-color: #2c3e50; /* Cambio de color al pasar el mouse */
+}
